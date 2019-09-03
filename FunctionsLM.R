@@ -8,7 +8,7 @@ generateY <- function(X, beta, sigma, seed = 5832652){
   #Set seed
   set.seed(seed)
   #Create data
-  Y <- X%*%beta + sigma*rnorm(nrow(X))
+  Y <- X %*% beta + sigma * rnorm(nrow(X))
   # Return Y
   return(Y)
 }
@@ -18,7 +18,7 @@ generateY <- function(X, beta, sigma, seed = 5832652){
 # Y -response
 calculateBeta <- function(X, Y){
   # Calculate beta_LS
-  beta_LS <- solve(crossprod(X),crossprod(X,Y))
+  beta_LS <- solve(crossprod(X), crossprod(X, Y))
   # Return beta
   return(beta_LS)
 }
